@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# BMSTU BITOP FINANCES
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BITOP FINANCES - это проект, реализовываемый в рамках практики в МГТУ им. Н.Э. Баумана. Сам проект заключается в ведении своего портфеля акций, которые покупаются за Бауман Монеты. Бауман Монеты генерируются посредством нажатия кликера на странице профиля: каждый клик добавляет одну монету, которые затем можно обменять на ценные акции. Побеждает тот пользователь, кто на момент завершения всех торгов (~ 2 недели) имеет в сумме наибольший портфель по количеству монет.
 
-## Available Scripts
+На скринах приложения с телефона можно увидеть, как выглядит приложение:
 
-In the project directory, you can run:
+<img src="https://github.com/Demonex/project2/assets/63501751/1656578c-144d-4434-875c-db98508b8d01" alt="screen1" width="200"/>
+<img src="https://github.com/Demonex/project2/assets/63501751/7c16ec43-7744-4b64-a28d-e9c582f5d0b1" alt="screen1" width="200"/>
+<img src="https://github.com/Demonex/project2/assets/63501751/e3161399-1a3f-46cb-abad-a4c96d43abb6" alt="screen1" width="200"/>
 
-### `npm start`
+В проекте участвовало 4-о человек, здесь я представляю Frontend часть, которая была полностью реализована мной. Для фронта был выбран React+Typescript в связке с Redux и redux-toolkit. Сервер реализован на Go, но здесь он рассматриваться не будет, так как реализовывался он моим тиммейтом
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Макеты Figma
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Приложение разрабатывалось под мобильные устройства как мобильное приложение. Приложение состоит из следующих экранов:
+* приветствие
+* портфель акций
+* история операций
+* просмотр акции
+* покупка/продажа акции
+* новости/хартбит
+* профиль-кликер
+* таблица лидеров
 
-### `npm test`
+Потыкать созданные в рамках проекта макеты можно сдесь: https://www.figma.com/proto/Qrz1QveyZpU5fcLcMfmIPP/BITOP-App-Design?node-id=840-2856&t=0PeAHqoWcJozWt3M-1&scaling=scale-down&content-scaling=fixed&page-id=183%3A2177&starting-point-node-id=840%3A2856
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Все страницы макетов: свалка, прод и референсы - и соответствующие макеты можно смотреть здесь: https://www.figma.com/design/Qrz1QveyZpU5fcLcMfmIPP/BITOP-App-Design?node-id=0-1&t=BThAsnXztGEfMjGa-1
 
-### `npm run build`
+## Запуск приложения
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Для локального развертывания приложения вначале скачайте исходный код. В папке проекта запустите команду
+```
+npm install
+```
+для загрузки node modules (ВАЖНО, чтобы на ПК был установлен NodeJS)/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+После установки node modules, запускаем сервер командой
+```
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+И ждем открытие приложения в браузере. Так как приложение разрабатывалось для мобильных устройств, имеет смысл просматривать приложение как мобильное. Для этого в панели инструментов разработчика выберите отображение как для мобильного устройства (левый верхний угол)
 
-### `npm run eject`
+## Запуск приложения на телефоне
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Как до этого было уже показано, можно использовать приложение непосредственно на телефоне. Для этого необходимо:
+* ПК, где на localhost развернуто приложение, и смартфон должны быть подключены к одному и тому же WI-FI
+* На телефоне нужно ввести ipv4 адрес компьютера вместе с портом. Узнать адрес, например, на Windows можно командой:
+```
+ipconfig
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+В случае успеха вы сможете пользоваться приложением на экране своего смартфона
