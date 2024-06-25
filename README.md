@@ -6,6 +6,7 @@ BITOP FINANCES - это проект, реализовываемый в рамк
 
 <img src="https://github.com/Demonex/project2/assets/63501751/1656578c-144d-4434-875c-db98508b8d01" alt="screen1" width="200"/>
 <img src="https://github.com/Demonex/project2/assets/63501751/7c16ec43-7744-4b64-a28d-e9c582f5d0b1" alt="screen1" width="200"/>
+<img src="https://github.com/Demonex/project2/assets/63501751/21371502-5d4c-4f02-a108-ef8f5c75b82d" alt="screen1" width="200"/>
 <img src="https://github.com/Demonex/project2/assets/63501751/e3161399-1a3f-46cb-abad-a4c96d43abb6" alt="screen1" width="200"/>
 
 В проекте участвовало 4-о человек, здесь я представляю Frontend часть, которая была полностью реализована мной. Для фронта был выбран React+Typescript в связке с Redux и redux-toolkit. Сервер реализован на Go, но здесь он рассматриваться не будет, так как реализовывался он моим тиммейтом
@@ -37,6 +38,7 @@ npm install
 После установки node modules, запускаем сервер командой
 ```
 npm start
+
 ```
 
 И ждем открытие приложения в браузере. Так как приложение разрабатывалось для мобильных устройств, имеет смысл просматривать приложение как мобильное. Для этого в панели инструментов разработчика выберите отображение как для мобильного устройства (левый верхний угол)
