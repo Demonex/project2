@@ -1,0 +1,84 @@
+@use '../../../assets/styles' as *;
+
+.history-stocks {
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100%;
+        border-bottom: $separator;
+
+        position: absolute;
+        bottom: 0;
+    }
+
+    &:last-child::after {
+        content: none;
+    }
+}
+
+.history-stocks-name {
+    display: block;
+}
+
+.history-stocks-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.history-stocks-logo {
+    width: 37px;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-stocks-name {
+    max-width: 170px;
+}
+
+.history-stocks-name-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 30px;
+
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: $dark-font-color;
+}
+
+.history-stocks-prices {
+    display: block;
+}
+
+.history-stocks-prices-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+
+    color: $dark-font-color;
+
+    &::after {
+        content: ' $';
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+    }
+}

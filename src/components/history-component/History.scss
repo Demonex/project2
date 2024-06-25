@@ -1,0 +1,60 @@
+@use '../../assets/styles' as *;
+
+.history-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 49px 26px 0 26px;
+    position: relative;
+}
+
+.history-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 20px;
+}
+
+.history-back-btn {
+    display: flex;
+
+    svg {
+        fill: $dark-font-color;
+    }
+}
+
+.history-header-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    color: $dark-font-color;
+}
+
+.history-day {
+    margin-top: 20px;
+}
+
+.history-day-header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+
+    color: $dark-font-color;
+}
+
+.history-day-content {
+    margin-top: 20px;
+}

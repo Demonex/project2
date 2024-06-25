@@ -1,0 +1,167 @@
+@use '../../../assets/styles' as *;
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 19px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+
+        border-bottom: $separator;
+    }
+
+    &:last-child::after {
+        content: none;
+    }
+}
+
+.post-header {
+    display: flex;
+    gap: 13px;
+}
+
+.header-logo {
+    height: 47px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: $news-bauman-logo-color;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.header-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+
+    color: $dark-font-color;
+
+    &::after {
+        content: url('../../../assets/icons/check.svg');
+        margin-left: 8px;
+    }
+}
+
+.header-time {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    letter-spacing: 0.1px;
+
+    color: $grey-light-font-color;
+}
+
+.post-content {
+    margin-top: 20px;
+}
+
+.post-content-common {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: -0.2px;
+
+    color: $dark-font-color;
+}
+
+.post-content-title {
+    @extend .post-content-common;
+    font-weight: 500;
+}
+
+.post-content-extended {
+    @extend .post-content-common;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.post-pic {
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.post-stocks-update {
+    height: 90px;
+    background: $news-stocks-card-color;
+    border-radius: 20px;
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.post-stocks-logo {
+    display: flex;
+
+    svg {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.stocks-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-stocks-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+
+    color: $dark-font-color;
+}
+
+.post-stocks-pointer {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.1px;
+
+    color: $grey-light-font-color;
+}
+
+.post-stocks-prices-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: $dark-font-color;
+}
+
+.post-stocks-prices-delta {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    text-align: end;
+}

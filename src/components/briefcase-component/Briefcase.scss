@@ -1,0 +1,23 @@
+@use '../../assets/styles' as *;
+
+.briefcase-container {
+    display: flex;
+    flex-direction: column;
+    padding: 49px 26px 0 26px;
+
+    flex: 1;
+    overflow: auto;
+}
+
+.briefcase-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: $dark-font-color;
+}

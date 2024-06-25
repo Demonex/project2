@@ -1,0 +1,60 @@
+@use '../../../assets/styles' as *;
+
+.portfolio-leaders-btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+
+    position: relative;
+
+    text-decoration: none;
+
+    &:active > .leaders-btn-layout {
+        transition: background 0.2s;
+        background: #e5e5e5;
+    }
+}
+
+.leaders-btn-layout {
+    height: 55px;
+    width: 100%;
+
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: $light-font-color;
+    transition: background 0.2s;
+
+    border: 0.5px solid $card-border-color;
+    border-radius: 16px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.leaders-btn-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+
+    color: $grey-light-font-color;
+}
+
+.leaders-btn-shadow {
+    max-width: 80%;
+    height: 41px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -8px;
+    background: $card-shadow-color;
+    filter: $card-shadow-blur;
+}

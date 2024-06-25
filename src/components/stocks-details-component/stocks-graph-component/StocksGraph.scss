@@ -1,0 +1,15 @@
+@use '../../../assets/styles' as *;
+
+.stocks-graph-container {
+    margin-top: 10px;
+}
+
+.stocks-graph-container::after {
+    content: '';
+    border-bottom: $separator;
+    display: block;
+}
+
+.canvasjs-chart-credit {
+    display: none;
+}

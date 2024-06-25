@@ -1,0 +1,135 @@
+@use '../../assets/styles' as *;
+
+.details-container {
+    padding: 54px 26px 0 26px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+
+    position: relative;
+    background: #fff;
+}
+
+.details-back {
+    align-self: flex-start;
+    display: flex;
+
+    svg {
+        fill: $dark-font-color;
+    }
+}
+
+.details-stocks-logo {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+}
+
+.details-stocks-name {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+.details-stocks-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+
+    color: $dark-font-color;
+}
+
+.details-stocks-price {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.details-stocks-price-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 39px;
+    letter-spacing: -1.4px;
+
+    color: $dark-font-color;
+
+    &::after {
+        content: 'USD';
+        margin-left: 10px;
+        font-style: normal;
+        font-weight: 400;
+
+        color: $grey-light-font-color;
+    }
+}
+
+.details-stocks-price-delta {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: -0.3px;
+
+    color: $green-font-color;
+}
+
+.details-stocks-actions {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+.details-stocks-actions-btn {
+    border-radius: 8px;
+    height: 55px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 125px;
+}
+
+.sell {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 39px;
+    letter-spacing: -0.3px;
+
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.purchase {
+    background: $primary-color;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 39px;
+    letter-spacing: -0.3px;
+
+    color: $light-font-color;
+    text-decoration: none;
+}

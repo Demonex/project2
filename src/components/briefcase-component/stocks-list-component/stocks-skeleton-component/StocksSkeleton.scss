@@ -1,0 +1,22 @@
+.stocks-skeleton {
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skeleton-stocks-name {
+    display: block;
+}
+
+.skeleton-stocks-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.skeleton-stocks-prices {
+    display: block;
+    text-align: end;
+}

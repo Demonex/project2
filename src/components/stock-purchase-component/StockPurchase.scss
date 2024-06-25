@@ -1,0 +1,239 @@
+@use '../../assets/styles' as *;
+
+.purchase-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    position: relative;
+    padding: 49px 26px 0 26px;
+}
+
+.purchase-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.purchase-back {
+    display: flex;
+
+    svg {
+        fill: $dark-font-color;
+    }
+}
+
+.purchase-header-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    color: $dark-font-color;
+}
+
+.purchase-stock-info {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    height: 70px;
+
+    background: $stock-cards-color;
+    border-radius: 12px;
+}
+
+.purchase-stock-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.3px;
+
+    color: $dark-font-color;
+}
+
+.purchase-stock-info-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.purchase-stock-logo {
+    height: 30px;
+    aspect-ratio: 1 / 1;
+}
+
+.purchase-stock-price {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.3px;
+
+    color: $dark-font-color;
+
+    &::after {
+        content: '$';
+        margin-left: 5px;
+        color: $grey-light-font-color;
+    }
+}
+
+.purchase-separator {
+    margin-top: 30px;
+    border-bottom: $separator;
+}
+
+.purchase-buy {
+    margin-top: 30px;
+}
+
+.purchase-buy-header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 19px;
+    letter-spacing: 0.3px;
+
+    color: $dark-font-color;
+}
+
+.purchase-buy-price {
+    margin-top: 25px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 0 12px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 39px;
+    letter-spacing: -0.3px;
+
+    color: $grey-light-font-color;
+
+    background: $stock-cards-color;
+    border-radius: 12px;
+}
+
+.purchase-amount {
+    margin-top: 30px;
+}
+
+.purchase-amount-input {
+    margin-top: 25px;
+    border: none;
+    outline: none;
+
+    height: 50px;
+    width: 100%;
+
+    background: #f6f7f7;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 0 12px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 39px;
+    letter-spacing: -0.3px;
+
+    color: $dark-font-color;
+}
+
+.purchase-amount-header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 19px;
+    letter-spacing: 0.3px;
+
+    color: $dark-font-color;
+}
+
+.purchase-overall {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.purchase-overall-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0.1px;
+
+    color: $dark-font-color;
+}
+
+.purchase-overall-price {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: -0.3px;
+
+    color: $dark-font-color;
+
+    &::after {
+        content: '$';
+        margin-left: 5px;
+        color: $grey-light-font-color;
+    }
+}
+
+.purchase-buy-btn-container {
+    flex: 1 0 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.purchase-buy-btn {
+    margin-bottom: 20px;
+    height: 53px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $primary-color;
+    border-radius: 8px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 39px;
+    letter-spacing: 0.3px;
+
+    color: $light-font-color;
+}

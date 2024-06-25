@@ -1,0 +1,171 @@
+@use '../../../assets/styles' as *;
+
+.clicker-container {
+    margin-top: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.clicker-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.counter-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.1px;
+
+    color: $grey-light-font-color;
+}
+
+.counter-number {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: -1.4px;
+
+    color: $dark-font-color;
+}
+
+.clicker-btn {
+    margin-top: 35px;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-circle {
+    overflow: hidden;
+
+    // background: linear-gradient(312.89deg, #0857c9 -24.96%, #0756c8 30.01%, #1367e0 83.61%);
+    background-color: $clicker-btn-color;
+    box-shadow: inset -14.6725px -20.786px 22.0087px $clicker-btn-shadow;
+    backdrop-filter: $clicker-btn-blur;
+
+    border-radius: 100%;
+    opacity: 90%;
+    aspect-ratio: 1;
+
+    // width: 100%;
+    flex: 1 1 0;
+
+    // max-width: 400px;
+    // min-width: 150px;
+    // min-height: 300px;
+
+    transition: background 0.3s;
+    position: relative;
+
+    &:active {
+        background: $clicker-btn-active;
+        transition: background 0.1s;
+    }
+
+    &:active > .lightning-shadow {
+        filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+    }
+
+    &:active > .lightning-color {
+        filter: invert(67%) sepia(47%) saturate(900%) hue-rotate(360deg) brightness(229%) contrast(110%);
+    }
+}
+
+.rotate {
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-border {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+}
+
+.lightning-color,
+.lightning-shadow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lightning-shadow {
+    transition: filter 0.3s;
+}
+
+.lightning-color {
+    z-index: 1;
+}
+
+.clicker-description {
+    margin: 20px;
+}
+
+.description-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+
+    color: $dark-font-color;
+    position: relative;
+    max-width: 233px;
+    margin: 0 auto;
+
+    &::before {
+        content: url('../../../assets/icons//arrow.svg');
+        position: absolute;
+        bottom: 10px;
+        left: -40px;
+    }
+}
+
+.fade {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    pointer-events: none;
+}
+.fade-entering {
+    opacity: 0;
+    transform: translateY(100%);
+}
+.fade-entered {
+    opacity: 1;
+    transform: translateY(0%);
+    pointer-events: all;
+
+    transition: opacity 500ms, transform 500ms;
+}
+.fade-exiting {
+
+}
+.fade-exited {
+
+}
+
+.animation {
+    overflow: hidden;
+}

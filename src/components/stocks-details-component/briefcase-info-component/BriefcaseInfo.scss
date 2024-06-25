@@ -1,0 +1,118 @@
+@use '../../../assets/styles' as *;
+
+.brief-info-container {
+    margin-top: 40px;
+}
+
+.brief-info-header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 100%;
+
+    color: $dark-font-color;
+}
+
+.brief-info-card {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    background: $card-color;
+    box-shadow: 0px 0px 15px $card-shadow-color;
+    border-radius: 16px;
+
+    padding: 17px 15px;
+}
+
+.brief-info-card-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100%;
+        display: block;
+        border-bottom: $separator;
+    }
+
+    & + & {
+        margin-top: 15px;
+    }
+
+    & + &::after {
+        content: none;
+    }
+
+    &:first-child .brief-info-card-tab-amount::after {
+        content: ' шт.';
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 39px;
+        letter-spacing: -0.7px;
+
+        color: $grey-light-font-color;
+    }
+
+    &:last-child .brief-info-card-tab-amount::after {
+        content: ' $';
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 39px;
+        letter-spacing: -0.7px;
+
+        color: $grey-light-font-color;
+    }
+}
+
+.brief-info-card-tab-header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1px;
+
+    color: $grey-light-font-color;
+}
+
+.brief-info-card-tab-amount {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 39px;
+    letter-spacing: -0.7px;
+
+    color: $dark-font-color;
+}
+
+.brief-info-card-tab-logo {
+    width: 35px;
+    aspect-ratio: 1 / 1;
+
+    position: absolute;
+    right: 0px;
+}
+
+.brief-info-card-tab-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.brief-info-card-tab-delta {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.3px;
+
+    color: $green-font-color;
+}

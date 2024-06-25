@@ -1,0 +1,145 @@
+@use '../../../assets/styles' as *;
+
+.tabs-container {
+    margin-top: 44px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+    position: relative;
+}
+
+.tabs {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+
+    letter-spacing: 1px;
+
+    color: $grey-font-color;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.active {
+    position: relative;
+    color: $dark-font-color;
+    transition: color 0.2s;
+    text-decoration: none;
+
+    cursor: pointer;
+    pointer-events: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+
+        max-width: 60px;
+
+        left: 0;
+        right: 0;
+        bottom: -10px;
+
+        margin: auto;
+        background: $primary-color;
+
+        transition: 0.5s;
+        border-radius: 4px;
+    }
+}
+
+.tabs-content {
+    margin-top: 30px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .tabs-slider {
+        position: relative;
+    }
+}
+
+
+.fade-left-enter {
+    opacity: 0;
+    transform: translateX(100%);
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+
+}
+
+.fade-left-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+
+    transition: opacity 300ms ease-in, transform 300ms ease;
+    z-index: 1;
+
+}
+
+.fade-left-exit {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1;
+
+}
+
+.fade-left-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+
+    transition: opacity 100ms ease-out, transform 300ms ease;
+    z-index: 1;
+
+}
+
+
+.fade-right-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+}
+
+.fade-right-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+
+    transition: opacity 300ms ease-in, transform 300ms ease;
+    z-index: 1;
+
+}
+
+.fade-right-exit {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1;
+
+}
+
+.fade-right-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+
+    transition: opacity 100ms ease-out, transform 300ms ease;
+    z-index: 1;
+
+}

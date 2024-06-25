@@ -1,0 +1,42 @@
+@use '../../assets/styles' as *;
+
+.navbar {
+    width: inherit;
+    min-height: 76px;
+    position: relative;
+
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // -webkit-backdrop-filter: blur(5px);
+    // backdrop-filter: blur(5px);
+
+}
+
+.navbar-container {
+    margin: 0 40px;
+    display: flex;
+    flex: 1 0 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active-link {
+    color: $navbar-link-active-color;
+    transition: color 0.3s;
+    display: flex;
+    z-index: 1;
+
+    &:first-child {
+        pointer-events: none;
+    }
+}
+
+.link {
+    color: $navbar-link-color;
+    transition: color 0.3s;
+    display: flex;
+    z-index: 1;
+}

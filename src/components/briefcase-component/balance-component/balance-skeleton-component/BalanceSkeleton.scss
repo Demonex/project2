@@ -1,0 +1,25 @@
+.skeleton-balance-card-info {
+    display: flex;
+    align-items: baseline;
+    margin-top: 4px;
+    gap: 8px;
+}
+
+.skeleton-card-info-overall {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 39px;
+
+    letter-spacing: -1.4px;
+}
+
+.skeleton-card-info-delta {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 39px;
+}
+

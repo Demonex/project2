@@ -1,0 +1,51 @@
+@use '../../../assets/styles' as *;
+
+.time-switch-container {
+    margin-top: 5px;
+
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & label {
+        width: 100%;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: -0.3px;
+
+        color: $dark-font-color;
+    }
+
+    & input[type='radio']:checked + label {
+        background: $primary-color;
+        padding: 7px 0;
+        border-radius: 16px;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: -0.3px;
+
+        color: $light-font-color;
+        transition: background 0.2s, color 0.2s;
+    }
+}
+
+.time-switch-input {
+    max-width: 70px;
+    flex: 1 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input[type='radio'] {
+    display: none;
+}

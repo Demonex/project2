@@ -1,0 +1,78 @@
+@use '../../../assets/styles' as *;
+
+.stock {
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        width: 100%;
+        border-bottom: $separator;
+
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.stock-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.stock-logo {
+    width: 35px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stock-name-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+
+    color: $dark-font-color;
+}
+
+.stock-amount {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1px;
+
+    color: $grey-light-font-color;
+}
+
+.stock-prices-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+
+    color: $dark-font-color;
+}
+
+.stock-prices-delta {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+
+    text-align: end;
+}
